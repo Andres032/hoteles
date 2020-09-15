@@ -78,32 +78,32 @@
         <div class=" card card-hotel d-flex flex-column justify-content-between">
           <img class="card-img-top" src= "images/hotel.png" width="10" height="250">
           <div class="card-body">
-             <h5 class="card-title"> Hotel del Prado </h5>
+             <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuentan con clases de musica gratis"> Hotel del Prado </h5>
              <h6 class="card-subtitle text-muted">Colombia</h6>
              <p class="card-text">Hotel ubicado en en el pais de colombia en la ciudad de barranquilla. </p>
           </div>
           <div>
-              <button class="btn btn-primary btn-reserva"><span class="oi oi-account-login"></span>Reservar</button>
+              <button class="btn btn-primary btn-reserva" ata-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
         </div>
         <div class=" card card-hotel d-flex flex-column justify-content-between ">
           <img class="card-img-top" src= "images/aires.png" width="10" height="250">
           <div class="card-body">
-              <h5 class="card-title"> Hotel Buenos Aires</h5>
+              <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuentan con clases de Piano gratis"> Hotel Buenos Aires</h5>
                <h6 class="card-subtitle text-muted">Argentina</h6>
                <p class="card-text">Hotel ubicado en en el centro de argentina</p>
           </div>
           <div>
-          <button class="btn btn-primary btn-reserva"><span class="oi oi-account-login"></span>Reservar</button>
+          <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
         </div>
         <div class=" card card-hotel d-flex flex-column justify-content-between">
           <img class="card-img-top" src= "images/lima.png" width="10" height="250">
           <div class="card-body">
-             <h5 class="card-title"> Hotel lima</h5>
+             <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuentan con clases de natacion gratis"> Hotel lima</h5>
              <h6 class="card-subtitle text-muted">Peru</h6>
             <p class="card-text">Hotel ubicado en Peru</p>
           </div>
           <div>
-          <button class="btn btn-primary btn-reserva"><span class="oi oi-account-login"></span>Reservar</button>
+          <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
         </div>
         <div class=" card card-hotel  d-flex flex-column justify-content-between ">
           <img class="card-img-top" src= "images/bogota.png" width="10" height="250">
@@ -114,7 +114,7 @@
               <button class="btn btn-outline-success" data-toggle="modal" data-target="#contacto">contacto</button>
           </div>
           <div>
-             <button class="btn btn-primary btn-reserva"><span class="oi oi-account-login"></span>Reservar</button>
+             <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
         </div>
       </div>
     </div>
@@ -179,5 +179,12 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script >
+         $(function(){
+              $("[data-toggle='tooltip']").tooltip();
+              $("[data-toggle='popover']").popover();
+         });
+    </script>
   </body>
 </html>
