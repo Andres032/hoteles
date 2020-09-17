@@ -110,7 +110,7 @@
              <p class="card-text">Hotel ubicado en en el pais de colombia en la ciudad de barranquilla. </p>
           </div>
           <div>
-              <button class="btn btn-primary btn-reserva" ata-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
+              <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
         </div>
         <div class=" card card-hotel d-flex flex-column justify-content-between ">
           <img class="card-img-top" src= "images/aires.png" width="10" height="250">
@@ -138,7 +138,7 @@
               <h5 class="card-title"> Hotel Bogota</h5>
               <h6 class="card-subtitle text-muted">Colombia</h6>
               <p class="card-text">Hotel ubicado en la Capital de colombia</p>
-              <button class="btn btn-outline-success" data-toggle="modal" data-target="#contacto">contacto</button>
+              <button class="btn btn-outline-success " data-toggle="modal" data-target="#contacto" id="contactoBtn">contacto</button>
           </div>
           <div>
              <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-account-login"></span>Reservar</button>
@@ -214,6 +214,28 @@
               $('.carousel').carousel({
                   interval: 2000
               });
+
+              $('#contacto').on('show.bs.modal', function (e){
+                  console.log('el modal contacto se esta mostrando');
+
+                  $('#contactoBtn').removeClass('btn-outline-success');
+                  $('#contactoBtn').addClass('btn-primary');
+                  $('#contactoBtn').prop('disable', true);
+              });
+
+              $('#contacto').on('shown.bs.modal', function (e){
+                  console.log('el modal contacto se mostro');
+              });
+
+               $('#contacto').on('hide.bs.modal', function (e){
+                  console.log('el modal contacto se oculta');
+              });
+              
+              $('#contacto').on('hidden.bs.modal', function (e){
+                  console.log('el modal contacto se oculto');
+                  $('#contactoBtn').prop('disable',false);
+              });
+
          });
     </script>
   </body>
