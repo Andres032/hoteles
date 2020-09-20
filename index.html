@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <!--build:css/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles2.css">
     <!-- open iconics CSS -->
 
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <!--endbuild-->
     <title>Guia Hoteles!</title>
   </head>
   <body>
@@ -203,40 +205,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script >
-         $(function(){
-              $("[data-toggle='tooltip']").tooltip();
-              $("[data-toggle='popover']").popover();
-              $('.carousel').carousel({
-                  interval: 2000
-              });
-
-              $('#contacto').on('show.bs.modal', function (e){
-                  console.log('el modal contacto se esta mostrando');
-
-                  $('#contactoBtn').removeClass('btn-outline-success');
-                  $('#contactoBtn').addClass('btn-primary');
-                  $('#contactoBtn').prop('disable', true);
-              });
-
-              $('#contacto').on('shown.bs.modal', function (e){
-                  console.log('el modal contacto se mostro');
-              });
-
-               $('#contacto').on('hide.bs.modal', function (e){
-                  console.log('el modal contacto se oculta');
-              });
-              
-              $('#contacto').on('hidden.bs.modal', function (e){
-                  console.log('el modal contacto se oculto');
-                  $('#contactoBtn').prop('disable',false);
-              });
-
-         });
-    </script>
+    <script src="js/index.js"></script>
+    <!-- endbuild -->
+    
   </body>
 </html>
